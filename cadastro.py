@@ -2,13 +2,14 @@ from PySimpleGUI import PySimpleGUI as sg
 from numpy import size
 
 # layout
-sg.theme('BluePurple')
+sg.theme('GreenMono')
 # aparencia é o nome da variável q eu escolhi
 aparencia = [
     # criando 3 linhas
-    [sg.Text('Usuário'), sg.Input(key='usuario', size=(20, 1))],
-    [sg.Text('Senha'), sg.Input(key='senha', password_char='*', size=(20, 1))],
-    [sg.Button('Entrar')]
+    [sg.Text('Usuário'), sg.Input(key='usuario', size=(25, 1))],
+    [sg.Text('Senha'), sg.Input(key='senha', password_char='*', size=(25, 1))],
+    [sg.Checkbox('Salvar login?')],
+    [sg.Button('Entrar')],
 ]
 # Criando a janela
 janela = sg.Window('Tela de Login', aparencia)
@@ -23,4 +24,3 @@ while True:  # para que não pare de funcionar
         # acessando os valor lidos na tela
         if valores['usuario'] == 'flavia' and valores['senha'] == '123456':
             print("Funcionou bem")
-   
