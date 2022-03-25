@@ -2,7 +2,7 @@ from PySimpleGUI import PySimpleGUI as sg
 from numpy import size
 
 # layout
-sg.theme('GreenMono')
+sg.theme('default')
 # aparencia é o nome da variável q eu escolhi
 aparencia = [
     # criando 3 linhas
